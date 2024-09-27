@@ -1,1 +1,21 @@
-hola mundo
+git branch
+
+mkdir BMPReader
+ls
+git --version
+cd BMPReader
+git clone https://github.com/unsa-cs/bmpreader-GustavoYG
+ls
+
+git add.
+git status
+
+git commit -m "Agreagar Prueba.txt"
+git log 
+
+git checkout ------
+echo hola mundo > "Prueba.txt"
+
+git push origin main
+
+
