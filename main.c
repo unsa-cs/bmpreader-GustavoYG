@@ -32,6 +32,11 @@ int main() {
     fprintf(stderr, "Uso: %s <archivo BMP>\n", argv[0]);
     return 1;
   }
+  image = readBMP(argv[1]);
+  if (!image) {
+    fprintf(stderr, "Error: No se pudo cargar el archivo BMP.\n");
+    return 1;
+  }
   glutInit(&arc, arv);
   // Establecer el modo de visualización
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
