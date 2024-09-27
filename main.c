@@ -23,10 +23,16 @@ int main() {
   if (!image) return 1;
 
   // Inicializar GLUT
+  /*
   int argc = 1; // Necesario para evitar problemas con glutInit
   char *argv[1] = { "" }; // Argumento vacío para GLUT
   glutInit(&argc, argv);
-
+  */
+  if (argc < 2) {
+    fprintf(stderr, "Uso: %s <archivo BMP>\n", argv[0]);
+    return 1;
+  }
+  glutInit(&arc, arv);
   // Establecer el modo de visualización
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
   glutInitWindowSize(image->width, image->height);
