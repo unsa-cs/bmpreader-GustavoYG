@@ -48,6 +48,11 @@ int main() {
     fprintf(stderr, "Error: No se pudo cargar el archivo BMP.\n");
     return 1;
   }
+  //convertirBN
+  // Verificar si se pasó la opción de blanco y negro
+  if (argc > 2 && strcmp(argv[2], "--bw") == 0) {
+    ConvertirBN(image);
+  }
   glutInit(&arc, arv);
   // Establecer el modo de visualización
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
