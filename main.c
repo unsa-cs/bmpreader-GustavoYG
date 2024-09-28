@@ -12,6 +12,16 @@ void display() {
   glFlush();
 }
 void ConvertirBN(BMPImage *image){
+  for (unsigned int i = 0; i < image->width * image->height * 3; i += 3) {
+    unsigned char r = image->data[i];
+    unsigned char g = image->data[i + 1];
+    unsigned char b = image->data[i + 2];
+    // Promedio para convertir a escala de grises
+    unsigned char gray = (r + g + b) / 3;
+    // Asignar el mismo valor a los tres componentes RGB
+    image->data[i] = gray;
+    image->data[i + 1] = gray;
+    image->data[i + 2] = gray;
 }
 int main() {
   char filename[256];
