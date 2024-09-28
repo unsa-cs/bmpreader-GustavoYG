@@ -11,7 +11,8 @@ void display() {
   }
   glFlush();
 }
-
+void ConvertirBN(BMPImage *image){
+}
 int main() {
   char filename[256];
 
